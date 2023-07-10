@@ -1,0 +1,9 @@
+List of Books
+  <ul class="books">
+  <% for(var i=0; i<books.length; i++) {%>
+    <li class="books">
+      <span><%= "BOOKID: " +books[i].bookid+"."%></span>
+      <span><%=" Name: " + books[i].bookname%></span>
+    </li>
+  <% } %>
+</ul>

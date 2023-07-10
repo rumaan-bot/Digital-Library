@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Insert-REACT</title>
+    <script src="react/react.development.js"></script>
+    <script src="react/react-dom.development.js"></script>
+    <script src="react/prop-types.js"></script>
+	<script src="react/axios.min.js"></script>
+    <script src="react/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+
+class App extends React.Component{
+  
+  constructor(props) {
+	super(props);
+	this.state = {
+	bookid:'',
+  	bookname: '',
+	bookdata:[]
+	}
+  };
+  
+handleSubmit(e){
+    e.preventDefault();
+	const mydata1=
+	{
+	  bookid: this.state.bookid,
+	  bookname:this.state.bookname
+	};
+    axios({
+      method: "POST", 
+      url:"http://localhost:8888/api/savedata", 
+      data:  mydata1,
+	 
+    }).then((response)=>{
+		console.log("Data has been sent to server");
+      if (response.data.status === 'success'){
+	     console.log("Data has been submitted");
+		//alert("Book Inserted.  "+response.data.mydata.bookid+":"+response.data.mydata.bookname)
+		console.log(response.data.mydata.bookid+":"+response.data.mydata.bookname+":"+response.data.mydata.serverMessage);
+		const myresponsedata = JSON.stringify(response.data.mydata)
+		this.setState({bookdata:myresponsedata})
+        this.resetForm()
+      }else if(response.data.status === 'fail'){
+        alert("Duplicate Book ID")
+		this.resetForm()
+      }
+	  
+    })
+	.catch((e) => {
+	console.log("Internal Server error"+e);
+	});;
+	
+  };
+
+  resetForm(){
+     this.setState({bookid: '',  bookname: ''})
+  };
+
+    
+  render() {
+     //console.log("State:",this.state)
+	return(
+  	<div className="App">
+  	<form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
+  	<div className="form-group">
+      	<label htmlFor="bookid">Book ID :</label>
+      	<input type="text" className="form-control" id="bookid" name="bookid" value={this.state.bookid} onChange={this.onBookChange.bind(this)} />
+  	</div>
+  	<br/>
+  	<div className="form-group">
+      	<label htmlFor="bookame">Book Name :</label>
+      	<input type="text" className="form-control"  id="bookname" name="bookname" value={this.state.bookname} onChange={this.onBookChange.bind(this)} />
+  	</div>
+		<br/>
+  	<div>
+	<button type="submit" className="btn btn-primary">Submit</button>
+	</div>
+  	</form>
+	
+	<h3>{this.state.bookdata}</h3>
+	<a href="index.html">Back</a>
+  	</div>
+	);
+	
+  }
+// Getting access to entered values
+   onBookChange(event) 
+   {
+       this.setState({ [event.target.name]: event.target.value });  
+   }
+  
+}
+ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+    
+  </body>
+</html>

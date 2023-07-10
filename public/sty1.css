@@ -1,0 +1,119 @@
+body {
+  margin:0px;
+}
+.colour-block {
+  background:#b20238;
+  width:60%;
+  padding:7% 20% 10% 20%;
+  color:#fff;
+}
+#h1{
+  text-align: center;
+  padding-left: 50px;
+}
+.white-block {
+  background:#fff;
+  font-color:#e8d21d;
+  width:60%;
+  padding:7% 20% 10% 20%;
+  color:#b20238;
+}
+h1 {
+  text-align:center;
+  font-size:80px;
+  font-family:'wire one', serif;
+  font-weight:bold;
+}
+p {
+  font-size:20px;
+  font-family:'Raleway', serif;
+}
+
+#butn0 
+{
+  font-weight:bold;
+  font-size: 35px;
+  right:81%;
+  width:100px;
+  height:40px;
+  padding: 0;
+  border: none;
+  background: none;
+  color:white;
+  position: absolute;
+}
+#butn1 
+{
+  font-weight:bold;
+  font-size: 35px;
+  right:66%;
+  width:100px;
+  height:40px;
+  padding: 0;
+  border: none;
+  background: none;
+  color:white;
+  position: absolute;
+}
+#butn2 
+{
+  font-weight:bold;
+  font-size: 35px;
+  right:55%;
+  width:100px;
+  height:40px;
+  padding: 0;
+  border: none;
+  background: none;
+  color:white;
+  position: absolute;
+}
+#butn3
+{
+  font-weight:bold;
+  font-size: 35px;
+  right:43%;
+  width:100px;
+  height:40px;
+  padding: 0;
+  border: none;
+  background: none;
+  color:white;
+  position: absolute;
+}
+#butn4 
+{
+  font-weight:bold;
+  font-size: 35px;
+  right:30%;
+  width:100px;
+  height:40px;
+  padding: 0;
+  border: none;
+  background: none;
+  color:white;
+  position: absolute;
+}
+#butn5 
+{
+  font-weight:bold;
+  font-size: 35px;
+  right:18%;
+  width:100px;
+  height:40px;
+  padding: 0;
+  border: none;
+  background: none;
+  color:white;
+  position: absolute;
+}
+a, a:hover, a:focus, a:active {
+      text-decoration: none;
+      color: #cf1578;
+ }
+
+
+}
+
+
+}

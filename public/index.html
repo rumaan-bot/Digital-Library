@@ -1,0 +1,73 @@
+<html>
+<head>
+<meta charset "utf-8">
+<meta name ="viewport" content ="width =device-width">
+<meta name ="description" content="Library website">
+<meta name ="author" content="Pragna,pranjal">
+<title>Library|Home</title>
+<link rel="stylesheet" href="sty.css" >
+</head>
+<STYLE>A {text-decoration: none;} </STYLE>
+<body link="#e8491d" vlink="#e8491d">
+<header>
+<div id="tit">Library Details</div>
+<nav>
+<ul>
+<button id='butn0' onclick="goHome()">Home</button>
+<button id='butn1' onclick="viewGenres()"><a href="genre.html">View Genres</button>
+<button id='butn2' onclick="viewDetailsBks()"><a href="bookdetails.html">View Book Details</a></button>
+<button id='butn3' onclick="viewAuthors()"><a href="cards/cards.html">View Authors</button>
+<button id='butn4' onclick="linksToOther()"><a href="./music library project/music.html">Music Library</a></button>
+</ul>
+</nav>
+</header>
+<section id ="showcase">
+<div class='container'>
+<h1>Welcome to Library</h1>
+<p>Educational materials available for all subject areas like Technology, Social Science, Literature, Law, Medical, etc.<br>
+<br>
+Huge volume of Educational materials authored by large number of authors available
+</p>
+</div>
+</section>
+<section id="newsletter">
+<div id="newcontainer">
+<h2>Subscribe to our Website for more Details</h2>
+<form>
+<input type="email" placeholder="email">
+<button type="Submit" class="button_1" >Submit</button>
+<script >
+	
+	const button_1 = document.querySelector('#button_1');
+	button_1.addEventListener('Submit',onsubmit);
+	function onsubmit(e){
+		e.preventDefault();
+	}
+	console.log(Submit.value);
+	
+
+
+</script>
+
+</form>
+</div>
+</section><br>
+</body>
+<footer >
+		<p>Library ,Pragna and pranjal ,copyright &copy;2021
+		</p>
+</footer>
+<style >
+footer{
+  
+  padding: 20px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #e8491d;
+  font-size: 23px;
+}
+</style>
+
+
+
+  

@@ -1,0 +1,50 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.main{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items:center ;
+}
+.card{
+	width: 280px;
+	height: 320px;
+	background: #FF3659;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+.card .content p:nth-child(1){
+	margin: 20px;
+	font-size: 1.1rem;
+}
+.card .content p:nth-child(2){
+	margin: 0 0 0 100px;
+}
+.card::before{
+	content: '';
+	position: absolute;
+	bottom: -55px;
+	transform: rotate(-10deg);
+	width: 120%;
+	height: 80px;
+	
+}
+.content{
+	transform: translayeY(-15px);
+}
+i:nth-child(1){
+	position: absolute;
+	bottom: 25px;
+	right: -10px;
+}
+i:nth-child(2){
+	position: absolute;
+	top: -15px;
+	left: -15px;
+}
